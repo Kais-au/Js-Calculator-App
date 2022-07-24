@@ -1,83 +1,86 @@
-//% IMPORTS %//
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+}
 
-@use "../assets/partials/palette";
+body {
+	padding: 0;
+	margin: 0;
+	background: #d1dbe4;
+}
 
 .calc {
-	display: flex;
+	display: grid;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
-	&__container {
+	align-content: center;
+	min-height: 100vh;
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+	&__output {
+		grid-column: 1 / -1;
+		background: linear-gradient(to top, #0b283c, #123247);
+		border-radius: 20px 20px 0px 0px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		padding: 20px;
-		margin-top: 5vh;
-		width: 25%;
+		align-items: flex-end;
+		justify-content: space-around;
+		padding: 10px;
+		height: 200px;
+		word-wrap: break-word;
+		word-break: break-all;
 
-		&__intro {
-			text-align: center;
-			padding: 20px;
-			&--heading {
-			}
+		&--acc {
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 1.5rem;
+		}
+
+		&--curr {
+			color: white;
+			font-size: 2.5rem;
 		}
 	}
 
-	&__shell {
-		display: flex;
-		justify-content: center;
-		&__board {
-			display: flex;
-			flex-direction: row;
-			border: 10px outset palette.$davys;
-			background-color: palette.$raisin;
-			box-shadow: 0px 0px 9px black;
-			height: 400px;
-			width: 300px;
-			justify-content: center;
+	&__divider {
+		grid-column: 1 / -1;
+		height: 1px;
+		background-color: white;
+	}
 
-			&-main {
-				display: flex;
-				flex-flow: row wrap;
-				width: 75%;
-				justify-content: space-around;
-				margin: 10px;
+	&__grid {
+		&__button {
+			cursor: pointer;
+			font-size: 2rem;
+			border: none;
+			outline: none;
+			background-color: rgb(12, 45, 71, 1);
+			color: white;
+
+			&--clear {
+				color: lightcoral;
 			}
 
-			&-extra {
-				display: flex;
-				flex-flow: column nowrap;
-				width: 25%;
-				justify-content: space-between;
-				margin: 10px;
-			}
-			&--btn {
-				width: 60px;
-				height: 60px;
-				margin: 2px;
-				padding: 1px 1px;
-				background: radial-gradient(#4c4c4c, 50%, #646464);
-				color: white;
-				text-shadow: 1px 1px 3px black;
-				font-size: 18px;
-				font-family: Arial, Helvetica, sans-serif;
-				border-radius: 12px 12px 12px 12px;
-				box-shadow: 3px 3px 9px black;
+			&--operator {
+				color: #40a4a2;
 			}
 
-			&--bigBtn {
-				width: 60px;
-				height: 150px;
-				margin: 2px;
-				padding: 1px 1px;
-				background: radial-gradient(#b9b9b9, 2%, #4c4c4c);
-				color: white;
-				text-shadow: 1px 1px 3px black;
-				box-shadow: 3px 3px 9px black;
-				border-radius: 12px 12px 12px 12px;
-				font-size: 18px;
-				font-family: Arial, Helvetica, sans-serif;
+			&--equals {
+				background: linear-gradient(to top, rgb(46, 138, 152), rgb(54, 185, 170));
+				&:hover {
+					background: linear-gradient(
+						to top,
+						rgb(46, 138, 152, 0.9),
+						rgb(54, 185, 170, 0.9)
+					);
+				}
 			}
+		}
+
+		&__button:hover {
+			background-color: rgb(12, 45, 71, 0.95);
 		}
 	}
 }

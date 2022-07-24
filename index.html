@@ -6,46 +6,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Js Calculator</title>
 		<link rel="stylesheet" href="./style/style.css" />
+		<script src="./src/script.js" defer></script>
 	</head>
 	<body>
-        <div class="calc">
-		    <div class="calc__container">
-		    	<div class="calc__container__intro">
-		    		<h1 class="calc__container__intro--heading">Js Calculator</h1>
-		    	</div>
-
-		        <div class="calc__shell">
-		    	    <div class="calc__shell__screen">
-
-                    </div>
-		    	        <div class="calc__shell__board">
-                            <div class="calc__shell__board-main">
-		    		            <button class="calc__shell__board--btn">Num</button>
-		    		            <button class="calc__shell__board--btn">/</button>
-		    		            <button class="calc__shell__board--btn">*</button>
-		    		            <button class="calc__shell__board--btn">7</button>
-		    		            <button class="calc__shell__board--btn">8</button>
-		    		            <button class="calc__shell__board--btn">9</button>
-		    		            <button class="calc__shell__board--btn">4</button>
-		    		            <button class="calc__shell__board--btn">5</button>
-		    		            <button class="calc__shell__board--btn">6</button>
-		    		            <button class="calc__shell__board--btn">1</button>
-		    		            <button class="calc__shell__board--btn">2</button>
-		    		            <button class="calc__shell__board--btn">3</button>
-		    		            <button class="calc__shell__board--btn">0</button>
-		    		            <button class="calc__shell__board--btn">000</button>
-		    		            <button class="calc__shell__board--btn">.</button>
-                            </div>
-                            <div class="calc__shell__board-extra">
-                                <button class="calc__shell__board--btn">-</button>
-                                <button class="calc__shell__board--btn">+</button>
-                                <button class="calc__shell__board--btn">BkSpc</button>
-                                <button class="calc__shell__board--bigBtn">Enter</button>
-                            </div>
-                        </div>
-                    </div>
-		    	</div>
-		    </div>
-        </div>
+		<div class="calc">
+			<div class="calc__output">
+				<div data-output-acc class="calc__output--acc"></div>
+				<div data-output-curr class="calc__output--curr"></div>
+			</div>
+			<button data-delete class="calc__grid__button calc__grid__button--clear">C</button>
+			<button data-all-clear class="calc__grid__button calc__grid__button--operator">
+				(AC)
+			</button>
+			<button data-operation class="calc__grid__button calc__grid__button--operator">
+				%
+			</button>
+			<button data-operation class="calc__grid__button calc__grid__button--operator">
+				÷
+			</button>
+			<button data-number class="calc__grid__button">1</button>
+			<button data-number class="calc__grid__button">2</button>
+			<button data-number class="calc__grid__button">3</button>
+			<button data-operation class="calc__grid__button calc__grid__button--operator">
+				x
+			</button>
+			<button data-number class="calc__grid__button">4</button>
+			<button data-number class="calc__grid__button">5</button>
+			<button data-number class="calc__grid__button">6</button>
+			<button data-operation class="calc__grid__button calc__grid__button--operator">
+				+
+			</button>
+			<button data-number class="calc__grid__button">7</button>
+			<button data-number class="calc__grid__button">8</button>
+			<button data-number class="calc__grid__button">9</button>
+			<button data-operation class="calc__grid__button calc__grid__button--operator">
+				-
+			</button>
+			<button data-number class="calc__grid__button">.</button>
+			<button data-number class="calc__grid__button">0</button>
+			<button data-number class="calc__grid__button">000</button>
+			<button data-equals class="calc__grid__button calc__grid__button--equals">=</button>
+		</div>
 	</body>
 </html>
