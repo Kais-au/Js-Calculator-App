@@ -18,7 +18,7 @@ body {
 	align-content: center;
 	min-height: 100vh;
 	grid-template-columns: repeat(4, 100px);
-	grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+	grid-template-rows: minmax(250px, auto) repeat(5, 100px);
 
 	&__output {
 		grid-column: 1 / -1;
@@ -29,7 +29,6 @@ body {
 		align-items: flex-end;
 		justify-content: space-around;
 		padding: 10px;
-		height: 200px;
 		word-wrap: break-word;
 		word-break: break-all;
 
@@ -42,12 +41,6 @@ body {
 			color: white;
 			font-size: 2.5rem;
 		}
-	}
-
-	&__divider {
-		grid-column: 1 / -1;
-		height: 1px;
-		background-color: white;
 	}
 
 	&__grid {
